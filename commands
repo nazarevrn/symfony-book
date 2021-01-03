@@ -1,0 +1,11 @@
+wget https://get.symfony.com/cli/installer -O - | bash
+
+export PATH="$HOME/.symfony/bin:$PATH"
+symfony server:ca:install
+sudo apt-get install php7.4-amqp php7.4-xml php7.4-intl php7.4-zip php7.4-redis php7.4-curl php7.4-gd \
+    php-pgsql php-gd
+
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
